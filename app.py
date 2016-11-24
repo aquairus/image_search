@@ -166,7 +166,7 @@ def search_image():
     image_key=request.args.get('image_key', '')
     if not os.path.exists(index_file):
         lib.index.build_index(index_file,'data/dataset')
-    result_file=lib.search.image_search(image_key,index_file)
+    result_file=lib.search.image_search(image_key,index_file,cnt=30)
     return json.dumps(result_file)
     # render_template('index_plus.html')
 

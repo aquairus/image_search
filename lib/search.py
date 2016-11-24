@@ -18,7 +18,7 @@ import cv2
 # args = vars(ap.parse_args())
 
 # initialize the image descriptor
-def image_search(query_image,index='data/index.csv',result_path='data/dataset'):
+def image_search(query_image,index='data/index.csv',result_path='data/dataset',cnt=20):
 	cd = ColorDescriptor((8, 12, 3))
 
 	# load the query image and describe it
@@ -28,7 +28,7 @@ def image_search(query_image,index='data/index.csv',result_path='data/dataset'):
 	# perform the search
 
 	searcher = Searcher(index)
-	results = searcher.search(features)
+	results = searcher.search(features,cnt)
 
 	# display the query
 	# cv2.imshow("Query", query)
