@@ -14,7 +14,7 @@ import traceback
 from flask import Flask, request, render_template, session, redirect, url_for, flash, send_from_directory
 # ,jsonify
 import json
-from flask.ext.bootstrap import Bootstrap
+# from flask.ext.bootstrap import Bootstrap
 from werkzeug import secure_filename
 
 from lib.upload_file import uploadfile
@@ -31,7 +31,7 @@ app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
 ALLOWED_EXTENSIONS = set(['txt', 'gif', 'png', 'jpg', 'jpeg', 'bmp', 'rar', 'zip', '7zip', 'doc', 'docx'])
 IGNORED_FILES = set(['.gitignore'])
 
-bootstrap = Bootstrap(app)
+# bootstrap = Bootstrap(app)
 
 
 def allowed_file(filename):
